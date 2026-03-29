@@ -1,5 +1,12 @@
 const CACHE = 'calculator-v1';
-const ASSETS = ['/', '/index.html', '/style.css', '/app.js', '/manifest.json', '/icon.png'];
+const ASSETS = [
+  '/ipad-calculator/',
+  '/ipad-calculator/index.html',
+  '/ipad-calculator/style.css',
+  '/ipad-calculator/app.js',
+  '/ipad-calculator/manifest.json',
+  '/ipad-calculator/icon.png'
+];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));

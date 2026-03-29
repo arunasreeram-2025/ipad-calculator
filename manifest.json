@@ -2,7 +2,7 @@
   "name": "Calculator",
   "short_name": "Calculator",
   "description": "A clean calculator app",
-  "start_url": "/",
+  "start_url": "/ipad-calculator/",
   "display": "fullscreen",
   "orientation": "portrait",
   "background_color": "#000000",
