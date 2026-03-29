@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+body {
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+  overflow: hidden;
+}
+
+.calculator {
+  width: min(500px, 100vw);
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 20px 0;
+}
+
+/* Display */
+.display {
+  padding: 20px 28px 10px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.expression {
+  font-size: clamp(20px, 4vw, 28px);
+  color: rgba(255, 255, 255, 0.5);
+  min-height: 36px;
+  word-break: break-all;
+  margin-bottom: 4px;
+}
+
+.result {
+  font-size: clamp(52px, 14vw, 88px);
+  color: #fff;
+  font-weight: 200;
+  line-height: 1;
+  word-break: break-all;
+  transition: font-size 0.1s ease;
+}
+
+.result.small {
+  font-size: clamp(36px, 9vw, 60px);
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  padding: 0 14px;
+}
+
+.btn {
+  border: none;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  font-size: clamp(26px, 6vw, 38px);
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.1s ease, transform 0.08s ease;
+  font-family: inherit;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.btn:active {
+  filter: brightness(1.4);
+  transform: scale(0.94);
+}
+
+/* Number buttons */
+.btn-number {
+  background: #333;
+  color: #fff;
+}
+
+/* Utility buttons (C, +/−, %) */
+.btn-utility {
+  background: #a5a5a5;
+  color: #000;
+}
+
+/* Operator buttons (÷, ×, −, +) */
+.btn-operator {
+  background: #ff9f0a;
+  color: #fff;
+}
+
+/* Equals button */
+.btn-equals {
+  background: #ff9f0a;
+  color: #fff;
+}
+
+/* Zero button spans 2 columns */
+.btn-zero {
+  grid-column: span 2;
+  border-radius: 9999px;
+  aspect-ratio: unset;
+  justify-content: flex-start;
+  padding-left: 30px;
+}
+
+/* Active operator highlight */
+.btn-operator.active {
+  background: #fff;
+  color: #ff9f0a;
+}

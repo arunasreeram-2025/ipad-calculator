@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Calculator" />
+  <meta name="theme-color" content="black" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon.png" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Calculator</title>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display">
+      <div class="expression" id="expression"></div>
+      <div class="result" id="result">0</div>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-utility" data-action="clear">C</button>
+      <button class="btn btn-utility" data-action="sign">+/−</button>
+      <button class="btn btn-utility" data-action="percent">%</button>
+      <button class="btn btn-operator" data-action="divide">÷</button>
+
+      <button class="btn btn-number" data-action="7">7</button>
+      <button class="btn btn-number" data-action="8">8</button>
+      <button class="btn btn-number" data-action="9">9</button>
+      <button class="btn btn-operator" data-action="multiply">×</button>
+
+      <button class="btn btn-number" data-action="4">4</button>
+      <button class="btn btn-number" data-action="5">5</button>
+      <button class="btn btn-number" data-action="6">6</button>
+      <button class="btn btn-operator" data-action="subtract">−</button>
+
+      <button class="btn btn-number" data-action="1">1</button>
+      <button class="btn btn-number" data-action="2">2</button>
+      <button class="btn btn-number" data-action="3">3</button>
+      <button class="btn btn-operator" data-action="add">+</button>
+
+      <button class="btn btn-number btn-zero" data-action="0">0</button>
+      <button class="btn btn-number" data-action="decimal">.</button>
+      <button class="btn btn-equals" data-action="equals">=</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
